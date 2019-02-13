@@ -42,7 +42,7 @@ public class ResponseBean<T> {
 	}
 	
 	public Boolean hasError(){
-		return "SUCCESS".equals(this.getStatus());
+		return !"SUCCESS".equals(this.getStatus());
 	}
 	
 	public String getStatus() {

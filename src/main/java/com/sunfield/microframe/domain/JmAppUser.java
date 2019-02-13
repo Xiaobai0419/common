@@ -28,6 +28,9 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="行业", dataType="String")
 	private String industry;
 
+	@ApiModelProperty(value="行业名称", dataType="String")
+	private String industryName;
+
 	@ApiModelProperty(value="职务", dataType="String")
 	private String post;
 
@@ -123,6 +126,14 @@ public class JmAppUser extends BaseDomain{
 
 	public void setIndustry(String industry) {
 		this.industry = industry;
+	}
+
+	public String getIndustryName() {
+		return industryName;
+	}
+
+	public void setIndustryName(String industryName) {
+		this.industryName = industryName;
 	}
 
 	public String getPost() {

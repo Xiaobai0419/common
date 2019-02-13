@@ -35,7 +35,4 @@ public class DateUtils {
         return calendar.getTime();
     }
 
-    public static void main(String[] a){
-        System.out.println(getDateAfterMonth(new Date(), 2));
-    }
 }

@@ -61,6 +61,9 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="会员购买期限(单位:月)", dataType="Integer")
 	private Integer memberMonth;
 
+	@ApiModelProperty(value="会员状态(0:是;1:否)", dataType="Integer")
+	private Integer memberStatus;
+
 	@ApiModelProperty(value="企业号认证关联id", dataType="String")
 	private String  businessAuthenticationId;
 
@@ -214,6 +217,14 @@ public class JmAppUser extends BaseDomain{
 
 	public void setMemberMonth(Integer memberMonth) {
 		this.memberMonth = memberMonth;
+	}
+
+	public Integer getMemberStatus() {
+		return memberStatus;
+	}
+
+	public void setMemberStatus(Integer memberStatus) {
+		this.memberStatus = memberStatus;
 	}
 
 	public String getBusinessAuthenticationId() {

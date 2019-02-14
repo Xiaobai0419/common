@@ -1,5 +1,6 @@
 package com.sunfield.microframe.common.utils;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -8,6 +9,8 @@ public class DateUtils {
     public final static String DEFAULT_FORMAT = "YYYY-MM-dd HH:mm:ss";
 
     public final static String DEFAULT_TIME_ZONE = "GMT+8";
+
+    public final static String DATE_FORMAT="YYYYMMddHHmmss";
 
     /**
      * 获取N天后的时间
@@ -35,4 +38,13 @@ public class DateUtils {
         return calendar.getTime();
     }
 
+    /**
+     * 获取当前时间的字符串格式
+     * @return
+     */
+    public static String getDateTimeFormat(){
+        Date date=new Date();
+        SimpleDateFormat sdf=new SimpleDateFormat(DATE_FORMAT);
+        return sdf.format(date);
+    }
 }

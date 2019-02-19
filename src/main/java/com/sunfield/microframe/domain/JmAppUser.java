@@ -88,6 +88,9 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="专家认证状态（0：未认证；1：认证中；2：已认证；3：已驳回）", dataType="Integer")
 	private Integer expertStatus;
 
+	@ApiModelProperty(value="融云token", dataType="String")
+	private String rcToken;
+
 	@ApiModelProperty(value="token", dataType="String")
 	private String token;
 
@@ -289,6 +292,14 @@ public class JmAppUser extends BaseDomain{
 
 	public void setExpertStatus(Integer expertStatus) {
 		this.expertStatus = expertStatus;
+	}
+
+	public String getRcToken() {
+		return rcToken;
+	}
+
+	public void setRcToken(String rcToken) {
+		this.rcToken = rcToken;
 	}
 
 	public String getToken() {

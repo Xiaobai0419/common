@@ -94,6 +94,17 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="token", dataType="String")
 	private String token;
 
+	@ApiModelProperty(value="入群时间", dataType="Date")
+	private Date groupAddDate;
+
+	public Date getGroupAddDate() {
+		return groupAddDate;
+	}
+
+	public void setGroupAddDate(Date groupAddDate) {
+		this.groupAddDate = groupAddDate;
+	}
+
 	public String getMobile() {
 		return mobile;
 	}

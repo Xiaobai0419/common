@@ -47,4 +47,9 @@ public class DateUtils {
         SimpleDateFormat sdf=new SimpleDateFormat(DATE_FORMAT);
         return sdf.format(date);
     }
+
+    public static Long getCurrentTimeInMillis(int millisecond){
+        Long l=System.currentTimeMillis();
+        return l+millisecond;
+    }
 }

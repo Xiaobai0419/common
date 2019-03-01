@@ -12,6 +12,7 @@ public enum ResponseStatus {
 	NO_MOBILE,
 	NO_DATA,
 	PARAMS_ERROR,
+	REPEAT,
 	BUSY,
 	FORBIDEN;
 
@@ -27,6 +28,8 @@ public enum ResponseStatus {
 				return "NO_DATA";
 			case PARAMS_ERROR:
 				return "PARAMS_ERROR";
+			case REPEAT:
+				return "REPEAT";
 			case FORBIDEN:
 				return "FORBIDEN";
 			case BUSY:

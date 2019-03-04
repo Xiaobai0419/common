@@ -6,6 +6,13 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(value="UpdateExpertStatusParams", description="更新专家状态入参")
 public class UpdateExpertStatusParams {
 
+    public UpdateExpertStatusParams(){}
+
+    public UpdateExpertStatusParams(String id,Integer expertStatus){
+        this.id=id;
+        this.expertStatus=expertStatus;
+    }
+
     @ApiModelProperty(value="用户ID", dataType="String")
     private String id;
 

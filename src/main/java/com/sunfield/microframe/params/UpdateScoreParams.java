@@ -2,9 +2,17 @@ package com.sunfield.microframe.params;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.models.auth.In;
 
 @ApiModel(value="UpdateScoreParams", description="更新积分入参")
 public class UpdateScoreParams {
+
+    public UpdateScoreParams(){}
+
+    public UpdateScoreParams(String id,Integer num){
+        this.id=id;
+        this.num=num;
+    }
 
     @ApiModelProperty(value="用户ID", dataType="String")
     private String id;

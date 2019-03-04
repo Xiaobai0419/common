@@ -6,6 +6,13 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(value="UpdateFoodParams", description="更新马粮数量入参")
 public class UpdateFoodParams {
 
+    public UpdateFoodParams(){}
+
+    public UpdateFoodParams(String id,Integer num){
+        this.id=id;
+        this.num=num;
+    }
+
     @ApiModelProperty(value="用户ID", dataType="String")
     private String id;
 

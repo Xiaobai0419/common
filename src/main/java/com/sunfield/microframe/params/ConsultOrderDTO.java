@@ -12,7 +12,7 @@ import java.util.Date;
  * @author zhaoyizhe
  * @date 2019/02/11
  */
-@ApiModel(value="ConsultOrderParam", description="咨询订单传输对象")
+@ApiModel(value="ConsultOrderDTO", description="咨询订单传输对象")
 public class ConsultOrderDTO implements OrderDTO {
 
     @ApiModelProperty(value="id", dataType="String")
@@ -58,9 +58,11 @@ public class ConsultOrderDTO implements OrderDTO {
     private String payOrder;
 
     @ApiModelProperty(value="专家账号", dataType="String")
-    private String majorCode;
+    private String expertCode;
     @ApiModelProperty(value="专家名称", dataType="String")
-    private String majorUsername;
+    private String expertUsername;
+    @ApiModelProperty(value="专家ID", dataType="String")
+    private String expertId;
 
     public ConsultOrderDTO(){
 
@@ -189,19 +191,27 @@ public class ConsultOrderDTO implements OrderDTO {
         this.payOrder = payOrder;
     }
 
-    public String getMajorCode() {
-        return majorCode;
+    public String getExpertCode() {
+        return expertCode;
     }
 
-    public void setMajorCode(String majorCode) {
-        this.majorCode = majorCode;
+    public void setExpertCode(String expertCode) {
+        this.expertCode = expertCode;
     }
 
-    public String getMajorUsername() {
-        return majorUsername;
+    public String getExpertUsername() {
+        return expertUsername;
     }
 
-    public void setMajorUsername(String majorUsername) {
-        this.majorUsername = majorUsername;
+    public void setExpertUsername(String expertUsername) {
+        this.expertUsername = expertUsername;
+    }
+
+    public String getExpertId() {
+        return expertId;
+    }
+
+    public void setExpertId(String expertId) {
+        this.expertId = expertId;
     }
 }

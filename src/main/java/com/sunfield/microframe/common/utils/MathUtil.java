@@ -1,5 +1,6 @@
 package com.sunfield.microframe.common.utils;
 
+import java.text.NumberFormat;
 import java.util.Random;
 
 /**
@@ -20,4 +21,20 @@ public class MathUtil {
         String str = String.format("%05d", number);
         return str;
     }
+
+    /**
+     * 计算百分比
+     * @param num
+     * @param total
+     * @return
+     */
+    public static int getPercentage(int num,int total){
+        NumberFormat numberFormat = NumberFormat.getInstance();
+
+        numberFormat.setMaximumFractionDigits(0);
+
+        String result = numberFormat.format((float) num / (float) total* 100);
+        return Integer.parseInt(result);
+    }
+
 }

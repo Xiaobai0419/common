@@ -13,8 +13,18 @@ public class JmIndustries extends BaseDomain{
 
 	@ApiModelProperty(value="行业类别", dataType="String")
 	private String name;
-	
-	
+
+	@ApiModelProperty(value="行业头像url", dataType="String")
+	private String picUrl;
+
+	public String getPicUrl() {
+		return picUrl;
+	}
+
+	public void setPicUrl(String picUrl) {
+		this.picUrl = picUrl;
+	}
+
 	public String getName() {
 		return name;
 	}

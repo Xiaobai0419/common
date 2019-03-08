@@ -100,6 +100,17 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="入群时间", dataType="Date")
 	private Date groupAddDate;
 
+	@ApiModelProperty(value="人脉关系(0 好友 1 对方已删除好友 2 好友请求中 3 对方已拒绝 4 无关联)", dataType="Integer")
+	private Integer relationType;
+
+	public Integer getRelationType() {
+		return relationType;
+	}
+
+	public void setRelationType(Integer relationType) {
+		this.relationType = relationType;
+	}
+
 	public Date getGroupAddDate() {
 		return groupAddDate;
 	}

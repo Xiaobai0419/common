@@ -17,6 +17,17 @@ public class JmIndustries extends BaseDomain{
 	@ApiModelProperty(value="行业头像url", dataType="String")
 	private String picUrl;
 
+	@ApiModelProperty(value="行业分值，用于用户行业的redis zset分值", dataType="Integer")
+	private Integer score = 0;
+
+	public Integer getScore() {
+		return score;
+	}
+
+	public void setScore(Integer score) {
+		this.score = score;
+	}
+
 	public String getPicUrl() {
 		return picUrl;
 	}

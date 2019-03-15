@@ -34,7 +34,7 @@ public class Page<T> {
 	}
 	
 	public Page(Integer totalNum, Integer pageSize, Integer pageNumber){
-		new Page<T>(totalNum, pageSize, pageNumber, null);
+		this(totalNum, pageSize, pageNumber, null);//构造方法中调用另一个构造方法，应用this
 	}
 	
 	public Page(){

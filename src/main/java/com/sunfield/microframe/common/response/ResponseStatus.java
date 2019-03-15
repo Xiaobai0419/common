@@ -14,7 +14,8 @@ public enum ResponseStatus {
 	PARAMS_ERROR,
 	REPEAT,
 	BUSY,
-	FORBIDEN;
+	FORBIDEN,
+	TOO_MANY;
 
 	public static String getStatus(ResponseStatus rs){
 		switch (rs) {
@@ -34,6 +35,8 @@ public enum ResponseStatus {
 				return "FORBIDEN";
 			case BUSY:
 				return "BUSY";
+			case TOO_MANY:
+				return "TOO_MANY";
 			default:
 				return "UNKNOWN";
 		}
@@ -55,6 +58,8 @@ public enum ResponseStatus {
 				return "无权限";
 			case BUSY:
 				return "系统繁忙";
+			case TOO_MANY:
+				return "当前系统人数较多";
 			default:
 				return "未知错误";
 		}

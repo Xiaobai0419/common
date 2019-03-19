@@ -15,6 +15,9 @@ public class SearchParams {
     @ApiModelProperty(value="搜索关键字，多个关键字用空格分开", dataType="String")
     private String keyword;
 
+    @ApiModelProperty(value="行业ID", dataType="String")
+    private String industryId;
+
     public Integer getPageNumber() {
         return pageNumber;
     }
@@ -37,5 +40,13 @@ public class SearchParams {
 
     public void setKeyword(String keyword) {
         this.keyword = keyword;
+    }
+
+    public String getIndustryId() {
+        return industryId;
+    }
+
+    public void setIndustryId(String industryId) {
+        this.industryId = industryId;
     }
 }

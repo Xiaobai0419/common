@@ -52,6 +52,12 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="积分剩余数量", dataType="Integer")
 	private Integer scoreNum;
 
+	@ApiModelProperty(value="好友数量", dataType="Integer")
+	private Integer friendNum;
+
+	@ApiModelProperty(value="咨询数量", dataType="Integer")
+	private Integer consultNum;
+
 	@ApiModelProperty(value="会员开始时间", dataType="Date")
 	private Date memberStartTime;
 
@@ -221,6 +227,22 @@ public class JmAppUser extends BaseDomain{
 
 	public void setScoreNum(Integer scoreNum) {
 		this.scoreNum = scoreNum;
+	}
+
+	public Integer getFriendNum() {
+		return friendNum;
+	}
+
+	public void setFriendNum(Integer friendNum) {
+		this.friendNum = friendNum;
+	}
+
+	public Integer getConsultNum() {
+		return consultNum;
+	}
+
+	public void setConsultNum(Integer consultNum) {
+		this.consultNum = consultNum;
 	}
 
 	public Date getMemberStartTime() {

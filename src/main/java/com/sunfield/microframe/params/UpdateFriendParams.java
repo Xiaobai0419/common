@@ -1,0 +1,30 @@
+package com.sunfield.microframe.params;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value="UpdateFriendParams", description="更新好友数量入参")
+public class UpdateFriendParams {
+
+    @ApiModelProperty(value="用户ID", dataType="String")
+    private String id;
+
+    @ApiModelProperty(value="好友数量增量(增加为正数，减少为负数)", dataType="Integer")
+    private Integer num;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+}

@@ -46,6 +46,24 @@ public class JmWisdomAnswers extends BaseDomain{
 	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	private Date dateEnd;
 	private List<String> userIdList;
+	private String mobile;
+	private String nickName;
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
 
 	public Date getDateStart() {
 		return dateStart;

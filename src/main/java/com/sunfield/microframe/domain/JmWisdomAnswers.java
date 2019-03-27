@@ -1,10 +1,12 @@
 package com.sunfield.microframe.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sunfield.microframe.domain.base.BaseDomain;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
-import com.sunfield.microframe.domain.base.BaseDomain;
+import java.util.Date;
+import java.util.List;
 
 /**
  * jm_wisdom_answers bean
@@ -38,6 +40,36 @@ public class JmWisdomAnswers extends BaseDomain{
 
 	@ApiModelProperty(value="访问者对该回答的踩赞状态", dataType="Integer")
 	private Integer visitUserYesOrNo = 0;
+
+	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")//用于接收json中特定形式格式化的日期字符串
+	private Date dateStart;
+	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+	private Date dateEnd;
+	private List<String> userIdList;
+
+	public Date getDateStart() {
+		return dateStart;
+	}
+
+	public void setDateStart(Date dateStart) {
+		this.dateStart = dateStart;
+	}
+
+	public Date getDateEnd() {
+		return dateEnd;
+	}
+
+	public void setDateEnd(Date dateEnd) {
+		this.dateEnd = dateEnd;
+	}
+
+	public List<String> getUserIdList() {
+		return userIdList;
+	}
+
+	public void setUserIdList(List<String> userIdList) {
+		this.userIdList = userIdList;
+	}
 
 	public String getVisitUserId() {
 		return visitUserId;

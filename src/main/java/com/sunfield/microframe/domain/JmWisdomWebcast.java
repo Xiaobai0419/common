@@ -1,5 +1,6 @@
 package com.sunfield.microframe.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sunfield.microframe.domain.base.BaseDomain;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -30,6 +31,27 @@ public class JmWisdomWebcast extends BaseDomain{
 
 	@ApiModelProperty(value="直播启禁用状态", dataType="String")
 	private String status1;
+
+	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")//用于接收json中特定形式格式化的日期字符串
+	private Date dateStart;
+	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+	private Date dateEnd;
+
+	public Date getDateStart() {
+		return dateStart;
+	}
+
+	public void setDateStart(Date dateStart) {
+		this.dateStart = dateStart;
+	}
+
+	public Date getDateEnd() {
+		return dateEnd;
+	}
+
+	public void setDateEnd(Date dateEnd) {
+		this.dateEnd = dateEnd;
+	}
 
 	public String getStatus1() {
 		return status1;

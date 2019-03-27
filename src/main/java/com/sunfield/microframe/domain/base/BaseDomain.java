@@ -32,10 +32,10 @@ public class BaseDomain {
 	private String status;
 	
 	@ApiModelProperty(value="每页条数", dataType="Integer")
-	private int pageSize;
+	private Integer pageSize;
 	
 	@ApiModelProperty(value="页码", dataType="Integer")
-	private int pageNumber;
+	private Integer pageNumber;
 	
 	public void preInsert(){
 		Date d = new Date();
@@ -100,19 +100,19 @@ public class BaseDomain {
 		this.status = status;
 	}
 
-	public int getPageSize() {
+	public Integer getPageSize() {
 		return pageSize;
 	}
 
-	public void setPageSize(int pageSize) {
+	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
 	}
 
-	public int getPageNumber() {
+	public Integer getPageNumber() {
 		return pageNumber;
 	}
 
-	public void setPageNumber(int pageNumber) {
+	public void setPageNumber(Integer pageNumber) {
 		this.pageNumber = pageNumber;
 	}
 

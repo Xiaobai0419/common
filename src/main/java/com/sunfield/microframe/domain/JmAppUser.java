@@ -3,7 +3,9 @@ package com.sunfield.microframe.domain;
 import com.sunfield.microframe.domain.base.BaseDomain;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.hibernate.validator.constraints.Length;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 /**
@@ -109,6 +111,12 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="人脉关系(0 好友 1 对方已删除好友 2 好友请求中 3 对方已拒绝 4 无关联)", dataType="Integer")
 	private Integer relationType;
 
+	@ApiModelProperty(value="查询条件，起始注册时间", dataType="Date")
+	private Date startCreateDate;
+
+	@ApiModelProperty(value="查询条件，结束注册时间", dataType="Date")
+	private Date endCreateDate;
+
 	public Integer getRelationType() {
 		return relationType;
 	}
@@ -125,6 +133,8 @@ public class JmAppUser extends BaseDomain{
 		this.groupAddDate = groupAddDate;
 	}
 
+	@NotBlank(message="手机号不能为空")
+	@Length(min=0, max=16, message="手机号长度不能超过 16 个字符")
 	public String getMobile() {
 		return mobile;
 	}
@@ -133,6 +143,8 @@ public class JmAppUser extends BaseDomain{
 		this.mobile = mobile;
 	}
 
+	@NotBlank(message="昵称不能为空")
+	@Length(min=0, max=64, message="昵称长度不能超过 64 个字符")
 	public String getNickName() {
 		return nickName;
 	}
@@ -141,6 +153,7 @@ public class JmAppUser extends BaseDomain{
 		this.nickName = nickName;
 	}
 
+	@Length(min=0, max=128, message="签名长度不能超过 128 个字符")
 	public String getSign() {
 		return sign;
 	}
@@ -149,6 +162,7 @@ public class JmAppUser extends BaseDomain{
 		this.sign = sign;
 	}
 
+	@Length(min=0, max=64, message="公司名称长度不能超过 64 个字符")
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -157,6 +171,7 @@ public class JmAppUser extends BaseDomain{
 		this.companyName = companyName;
 	}
 
+	@Length(min=0, max=64, message="行业长度不能超过 64 个字符")
 	public String getIndustry() {
 		return industry;
 	}
@@ -173,6 +188,7 @@ public class JmAppUser extends BaseDomain{
 		this.industryName = industryName;
 	}
 
+	@Length(min=0, max=64, message="职务长度不能超过 64 个字符")
 	public String getPost() {
 		return post;
 	}
@@ -189,6 +205,7 @@ public class JmAppUser extends BaseDomain{
 		this.gender = gender;
 	}
 
+	@Length(min=0, max=256, message="头像url长度不能超过 256 个字符")
 	public String getHeadPicUrl() {
 		return headPicUrl;
 	}
@@ -197,6 +214,7 @@ public class JmAppUser extends BaseDomain{
 		this.headPicUrl = headPicUrl;
 	}
 
+	@Length(min=0, max=256, message="名片url长度不能超过 256 个字符")
 	public String getCardPicUrl() {
 		return cardPicUrl;
 	}
@@ -363,5 +381,21 @@ public class JmAppUser extends BaseDomain{
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public Date getStartCreateDate() {
+		return startCreateDate;
+	}
+
+	public void setStartCreateDate(Date startCreateDate) {
+		this.startCreateDate = startCreateDate;
+	}
+
+	public Date getEndCreateDate() {
+		return endCreateDate;
+	}
+
+	public void setEndCreateDate(Date endCreateDate) {
+		this.endCreateDate = endCreateDate;
 	}
 }

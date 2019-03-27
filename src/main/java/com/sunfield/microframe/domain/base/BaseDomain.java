@@ -1,6 +1,5 @@
 package com.sunfield.microframe.domain.base;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sunfield.microframe.common.utils.UUID;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -57,7 +56,6 @@ public class BaseDomain {
 		this.id = id;
 	}
 
-//	@JsonFormat(pattern = DateUtils.DEFAULT_FORMAT, timezone = DateUtils.DEFAULT_TIME_ZONE)
 	public Date getCreateDate() {
 		return createDate;
 	}
@@ -66,7 +64,6 @@ public class BaseDomain {
 		this.createDate = createDate;
 	}
 
-//	@JsonFormat(pattern = DateUtils.DEFAULT_FORMAT, timezone = DateUtils.DEFAULT_TIME_ZONE)
 	public Date getUpdateDate() {
 		return updateDate;
 	}
@@ -91,7 +88,6 @@ public class BaseDomain {
 		this.updateBy = updateBy;
 	}
 
-	@JsonIgnore
 	public String getStatus() {
 		return status;
 	}

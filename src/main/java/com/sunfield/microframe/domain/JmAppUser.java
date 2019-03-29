@@ -117,6 +117,9 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="查询条件，结束注册时间", dataType="Date")
 	private Date endCreateDate;
 
+    @ApiModelProperty(value="查询条件，用户认证状态(0:认证用户;1:普通用户)", dataType="Integer")
+	private Integer userCardStatus;
+
 	public Integer getRelationType() {
 		return relationType;
 	}
@@ -398,4 +401,12 @@ public class JmAppUser extends BaseDomain{
 	public void setEndCreateDate(Date endCreateDate) {
 		this.endCreateDate = endCreateDate;
 	}
+
+    public Integer getUserCardStatus() {
+        return userCardStatus;
+    }
+
+    public void setUserCardStatus(Integer userCardStatus) {
+        this.userCardStatus = userCardStatus;
+    }
 }

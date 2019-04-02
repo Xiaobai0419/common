@@ -3,6 +3,10 @@ package com.sunfield.microframe.domain;
 import com.sunfield.microframe.domain.base.BaseDomain;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * jm_app_version bean
@@ -25,8 +29,8 @@ public class JmAppVersion extends BaseDomain{
 	
 	@ApiModelProperty(value="强制更新(0:强制;1:不强制)", dataType="String")
 	private String forceUpdateStatus;
-	
-	
+
+	@NotNull(message="版本号不能为空")
 	public Integer getVersion() {
 		return version;
 	}
@@ -34,7 +38,9 @@ public class JmAppVersion extends BaseDomain{
 	public void setVersion(Integer version) {
 		this.version = version;
 	}
-	
+
+	@NotBlank(message="版本名称不能为空")
+	@Length(min=0, max=16, message="版本名称长度不能超过 16 个字符")
 	public String getVersionName() {
 		return versionName;
 	}
@@ -42,7 +48,9 @@ public class JmAppVersion extends BaseDomain{
 	public void setVersionName(String versionName) {
 		this.versionName = versionName;
 	}
-	
+
+	@NotBlank(message="版本描述不能为空")
+	@Length(min=0, max=256, message="版本描述长度不能超过 256 个字符")
 	public String getVersionDescription() {
 		return versionDescription;
 	}
@@ -58,7 +66,9 @@ public class JmAppVersion extends BaseDomain{
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
+
+	@NotBlank(message="跳转url不能为空")
+	@Length(min=0, max=256, message="跳转url长度不能超过 256 个字符")
 	public String getForceUpdateStatus() {
 		return forceUpdateStatus;
 	}

@@ -50,6 +50,15 @@ public class JmWisdomVideos extends BaseDomain{
 	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	private Date dateEnd;
 	private List<String> interviewIdList;
+	private String interviewName;
+
+	public String getInterviewName() {
+		return interviewName;
+	}
+
+	public void setInterviewName(String interviewName) {
+		this.interviewName = interviewName;
+	}
 
 	public Date getDateStart() {
 		return dateStart;

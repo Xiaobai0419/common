@@ -24,9 +24,11 @@ public class JmWisdomWebcast extends BaseDomain{
 	private String webcastLink;
 	
 	@ApiModelProperty(value="直播开始时间", dataType="Date")
+	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	private Date beginTime;
 	
 	@ApiModelProperty(value="直播结束时间", dataType="Date")
+	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	private Date endTime;
 
 	@ApiModelProperty(value="直播启禁用状态", dataType="String")

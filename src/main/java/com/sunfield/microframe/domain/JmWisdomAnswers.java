@@ -29,9 +29,15 @@ public class JmWisdomAnswers extends BaseDomain{
 	
 	@ApiModelProperty(value="赞数,缓存", dataType="Integer")
 	private Integer ayes = 0;
-	
+
+	@ApiModelProperty(value="赞标识", dataType="Integer")
+	private Integer ayesTag = 0;
+
 	@ApiModelProperty(value="踩数,缓存", dataType="Integer")
 	private Integer antis = 0;
+
+	@ApiModelProperty(value="踩标识", dataType="Integer")
+	private Integer antisTag = 0;
 
 	private JmAppUser user;
 
@@ -48,6 +54,22 @@ public class JmWisdomAnswers extends BaseDomain{
 	private List<String> userIdList;
 	private String mobile;
 	private String nickName;
+
+	public Integer getAyesTag() {
+		return ayesTag;
+	}
+
+	public void setAyesTag(Integer ayesTag) {
+		this.ayesTag = ayesTag;
+	}
+
+	public Integer getAntisTag() {
+		return antisTag;
+	}
+
+	public void setAntisTag(Integer antisTag) {
+		this.antisTag = antisTag;
+	}
 
 	public String getMobile() {
 		return mobile;

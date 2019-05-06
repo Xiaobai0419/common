@@ -32,14 +32,36 @@ public class JmRelationshipFriendlife extends BaseDomain{
 	@ApiModelProperty(value="点赞数", dataType="Integer")
 	private Integer ayes = 0;
 
+	@ApiModelProperty(value="点赞标识", dataType="Integer")
+	private Integer ayesTag = 0;
+
 	@ApiModelProperty(value="评论数", dataType="Integer")
 	private Integer comments = 0;
+
+	@ApiModelProperty(value="评论标识", dataType="Integer")
+	private Integer commentTag = 0;
 
 	@ApiModelProperty(value="登录用户id", dataType="String")
 	private String visitedUserId;
 
 	@ApiModelProperty(value="登录用户对该朋友圈点赞状态 0 无赞 1 赞", dataType="String")
 	private Integer visitedUserYesOrNo = 0;
+
+	public Integer getAyesTag() {
+		return ayesTag;
+	}
+
+	public void setAyesTag(Integer ayesTag) {
+		this.ayesTag = ayesTag;
+	}
+
+	public Integer getCommentTag() {
+		return commentTag;
+	}
+
+	public void setCommentTag(Integer commentTag) {
+		this.commentTag = commentTag;
+	}
 
 	public Integer getVisitedUserYesOrNo() {
 		return visitedUserYesOrNo;

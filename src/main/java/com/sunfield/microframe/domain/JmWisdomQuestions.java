@@ -35,13 +35,22 @@ public class JmWisdomQuestions extends BaseDomain{
 	
 	@ApiModelProperty(value="赞数,缓存", dataType="Integer")
 	private Integer ayes = 0;
-	
+
+	@ApiModelProperty(value="赞标识", dataType="Integer")
+	private Integer ayesTag = 0;
+
 	@ApiModelProperty(value="踩数,缓存", dataType="Integer")
 	private Integer antis = 0;
-	
+
+	@ApiModelProperty(value="踩标识", dataType="Integer")
+	private Integer antisTag = 0;
+
 	@ApiModelProperty(value="回答数", dataType="Integer")
 	private Integer answers = 0;
-	
+
+	@ApiModelProperty(value="回答标识", dataType="Integer")
+	private Integer answerTag = 0;
+
 	@ApiModelProperty(value="精品排序，从1开始，空代表非精品问答", dataType="Integer")
 	private Integer selectOrder;
 
@@ -75,6 +84,30 @@ public class JmWisdomQuestions extends BaseDomain{
 	private String imageUrl7;
 	private String imageUrl8;
 	private String imageUrl9;
+
+	public Integer getAyesTag() {
+		return ayesTag;
+	}
+
+	public void setAyesTag(Integer ayesTag) {
+		this.ayesTag = ayesTag;
+	}
+
+	public Integer getAntisTag() {
+		return antisTag;
+	}
+
+	public void setAntisTag(Integer antisTag) {
+		this.antisTag = antisTag;
+	}
+
+	public Integer getAnswerTag() {
+		return answerTag;
+	}
+
+	public void setAnswerTag(Integer answerTag) {
+		this.answerTag = answerTag;
+	}
 
 	public String getMobile() {
 		return mobile;

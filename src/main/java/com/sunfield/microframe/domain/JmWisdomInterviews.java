@@ -32,6 +32,9 @@ public class JmWisdomInterviews extends BaseDomain{
 	@ApiModelProperty(value="收藏人数,缓存", dataType="Integer")
 	private Integer favorites = 0;
 
+	@ApiModelProperty(value="收藏标识", dataType="Integer")
+	private Integer favoriteTag = 0;
+
 	@ApiModelProperty(value="访问用户ID,关联用户信息表ID", dataType="String")
 	private String visitUserId;
 
@@ -42,6 +45,14 @@ public class JmWisdomInterviews extends BaseDomain{
 	private Date dateStart;
 	@JsonFormat(locale="zh",pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	private Date dateEnd;
+
+	public Integer getFavoriteTag() {
+		return favoriteTag;
+	}
+
+	public void setFavoriteTag(Integer favoriteTag) {
+		this.favoriteTag = favoriteTag;
+	}
 
 	public Date getDateStart() {
 		return dateStart;

@@ -33,6 +33,9 @@ public class JmWisdomVideos extends BaseDomain{
 	@ApiModelProperty(value="赞数,缓存，允许评论和点赞时记录值", dataType="Integer")
 	private Integer ayes = 0;
 
+	@ApiModelProperty(value="赞标识", dataType="Integer")
+	private Integer ayesTag = 0;
+
 	@ApiModelProperty(value="是否会员专属，1是，2否", dataType="Integer")
 	private Integer leaguerOnly;
 	
@@ -51,6 +54,14 @@ public class JmWisdomVideos extends BaseDomain{
 	private Date dateEnd;
 	private List<String> interviewIdList;
 	private String interviewName;
+
+	public Integer getAyesTag() {
+		return ayesTag;
+	}
+
+	public void setAyesTag(Integer ayesTag) {
+		this.ayesTag = ayesTag;
+	}
 
 	public String getInterviewName() {
 		return interviewName;

@@ -102,6 +102,9 @@ public class JmAppUser extends BaseDomain{
 	@ApiModelProperty(value="融云token", dataType="String")
 	private String rcToken;
 
+	@ApiModelProperty(value="支付宝账号", dataType="String")
+	private String alipayName;
+
 	@ApiModelProperty(value="token", dataType="String")
 	private String token;
 
@@ -409,4 +412,12 @@ public class JmAppUser extends BaseDomain{
     public void setUserCardStatus(Integer userCardStatus) {
         this.userCardStatus = userCardStatus;
     }
+
+	public String getAlipayName() {
+		return alipayName;
+	}
+
+	public void setAlipayName(String alipayName) {
+		this.alipayName = alipayName;
+	}
 }

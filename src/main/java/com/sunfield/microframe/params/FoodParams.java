@@ -27,7 +27,7 @@ public class FoodParams {
     @ApiModelProperty(value="数量", dataType="BigDecimal")
     private BigDecimal number;
 
-    @ApiModelProperty(value="类型:1咨询成功,2旁听,3咨询关闭,4提现", dataType="Integer")
+    @ApiModelProperty(value="类型:1咨询成功,2旁听,3咨询关闭,4提现,5未用马粮咨询,6未用马粮旁听", dataType="Integer")
     private Integer type;
 
     @ApiModelProperty(value="消费用户ID", dataType="String")

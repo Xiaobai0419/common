@@ -48,7 +48,7 @@ public class DateUtils {
         return sdf.format(date);
     }
 
-    public static Long getCurrentTimeInMillis(int millisecond){
+    public static Long getCurrentTimeInMillis(long millisecond){
         Long l=System.currentTimeMillis();
         return l+millisecond;
     }

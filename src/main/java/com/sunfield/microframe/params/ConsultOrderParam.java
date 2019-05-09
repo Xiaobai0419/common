@@ -14,6 +14,16 @@ import java.math.BigDecimal;
 @ApiModel(value="ConsultOrderParam", description="咨询订单传输对象")
 public class ConsultOrderParam implements OrderDTO {
 
+    public ConsultOrderParam(){}
+
+    public ConsultOrderParam(String userId,String consultMessage,String counsultId,BigDecimal total){
+        this.userId=userId;
+        this.consultMessage=consultMessage;
+        this.counsultId=counsultId;
+        this.total=total;
+    }
+
+
     @ApiModelProperty(value="id", dataType="String")
     private String id;
 
@@ -29,8 +39,8 @@ public class ConsultOrderParam implements OrderDTO {
     @ApiModelProperty(value="总额", dataType="BigDecimal")
     private BigDecimal total;
 
-    @ApiModelProperty(value="马粮", dataType="Integer")
-    private BigDecimal food;
+    @ApiModelProperty(value="是否马粮支付:0未使用，1已使用", dataType="Integer")
+    private Boolean food;
 
     @ApiModelProperty(value="支付方式:1微信、2支付宝", dataType="Integer")
     private Integer payment;
@@ -43,6 +53,37 @@ public class ConsultOrderParam implements OrderDTO {
 
     @ApiModelProperty(value="微信或支付宝的订单号", dataType="String")
     private String payOrder;
+
+    @ApiModelProperty(value="专家账号", dataType="String")
+    private String expertCode;
+
+    @ApiModelProperty(value="专家名称", dataType="String")
+    private String expertUsername;
+
+    @ApiModelProperty(value="预支付交易会话ID", dataType="String")
+    private String prepayid;
+
+    @ApiModelProperty(value="商户号", dataType="String")
+    private String partnerid;
+
+    @ApiModelProperty(value="随机字符串", dataType="String")
+    private String noncestr;
+
+    @ApiModelProperty(value="签名", dataType="String")
+    private String sign;
+
+    @ApiModelProperty(value="时间戳", dataType="Long")
+    private Long timestamp;
+
+
+    public void payConsultOrderParam(String noncestr,String partnerid,String prepayid,String sign,long timestamp,String counsultId){
+        this.noncestr=noncestr;
+        this.partnerid=partnerid;
+        this.prepayid=prepayid;
+        this.sign=sign;
+        this.timestamp=timestamp;
+        this.counsultId=counsultId;
+    }
 
 
     public String getId() {
@@ -86,11 +127,11 @@ public class ConsultOrderParam implements OrderDTO {
         this.total = total;
     }
 
-    public BigDecimal getFood() {
+    public Boolean getFood() {
         return food;
     }
 
-    public void setFood(BigDecimal food) {
+    public void setFood(Boolean food) {
         this.food = food;
     }
 
@@ -124,5 +165,61 @@ public class ConsultOrderParam implements OrderDTO {
 
     public void setPayOrder(String payOrder) {
         this.payOrder = payOrder;
+    }
+
+    public String getExpertCode() {
+        return expertCode;
+    }
+
+    public void setExpertCode(String expertCode) {
+        this.expertCode = expertCode;
+    }
+
+    public String getExpertUsername() {
+        return expertUsername;
+    }
+
+    public void setExpertUsername(String expertUsername) {
+        this.expertUsername = expertUsername;
+    }
+
+    public String getPrepayid() {
+        return prepayid;
+    }
+
+    public void setPrepayid(String prepayid) {
+        this.prepayid = prepayid;
+    }
+
+    public String getPartnerid() {
+        return partnerid;
+    }
+
+    public void setPartnerid(String partnerid) {
+        this.partnerid = partnerid;
+    }
+
+    public String getNoncestr() {
+        return noncestr;
+    }
+
+    public void setNoncestr(String noncestr) {
+        this.noncestr = noncestr;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public void setSign(String sign) {
+        this.sign = sign;
+    }
+
+    public Long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
     }
 }

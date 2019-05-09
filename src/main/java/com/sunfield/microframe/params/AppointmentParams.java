@@ -17,7 +17,7 @@ public class AppointmentParams{
 
     public AppointmentParams(){}
 
-    public AppointmentParams(JmAppUser user,JmAppUser expert,String expertRealName,int state,String reason,Date createDate,Date updateDate){
+    public AppointmentParams(JmAppUser user,JmAppUser expert,String expertRealName,int state,String reason,Date createDate,Date updateDate,String introduce,String expertIntroduce){
         this.state=state;
         this.reason=reason;
         this.createDate=createDate;
@@ -36,6 +36,9 @@ public class AppointmentParams{
         this.headPicUrl=user.getHeadPicUrl();
         this.post=user.getPost();
         this.phone=user.getMobile();
+        this.expertHeadImg=expert.getHeadPicUrl();
+        this.introduce=introduce;
+        this.expertIntroduce=expertIntroduce;
     }
 
     @ApiModelProperty(value="专家ID", dataType="String")
@@ -47,8 +50,14 @@ public class AppointmentParams{
     @ApiModelProperty(value="专家真实姓名", dataType="String")
     private String expertRealName;
 
+    @ApiModelProperty(value="专家头像", dataType="String")
+    private String expertHeadImg;
+
     @ApiModelProperty(value="专家公司", dataType="String")
     private String expertCompanyName;
+
+    @ApiModelProperty(value="专家介绍", dataType="String")
+    private String expertIntroduce;
 
     @ApiModelProperty(value="专家电话", dataType="String")
     private String expertPhone;
@@ -76,6 +85,9 @@ public class AppointmentParams{
 
     @ApiModelProperty(value="约见人头像", dataType="String")
     private String headPicUrl;
+
+    @ApiModelProperty(value="约见人介绍", dataType="String")
+    private String introduce;
 
     @ApiModelProperty(value="约见人职务", dataType="String")
     private String post;
@@ -235,5 +247,29 @@ public class AppointmentParams{
 
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public String getExpertHeadImg() {
+        return expertHeadImg;
+    }
+
+    public void setExpertHeadImg(String expertHeadImg) {
+        this.expertHeadImg = expertHeadImg;
+    }
+
+    public String getExpertIntroduce() {
+        return expertIntroduce;
+    }
+
+    public void setExpertIntroduce(String expertIntroduce) {
+        this.expertIntroduce = expertIntroduce;
+    }
+
+    public String getIntroduce() {
+        return introduce;
+    }
+
+    public void setIntroduce(String introduce) {
+        this.introduce = introduce;
     }
 }

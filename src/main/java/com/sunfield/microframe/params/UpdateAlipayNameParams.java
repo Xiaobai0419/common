@@ -16,6 +16,15 @@ public class UpdateAlipayNameParams {
     @ApiModelProperty(value="支付宝账号", dataType="String")
     private String alipayName;
 
+    public UpdateAlipayNameParams(){
+
+    }
+
+    public UpdateAlipayNameParams(String id,String alipayName){
+        this.id=id;
+        this.alipayName=alipayName;
+    }
+
     public String getId() {
         return id;
     }

@@ -15,10 +15,8 @@ import java.util.Date;
 @ApiModel(value="MeetingStatisticsParam", description="活动会议统计信息")
 public class MeetingStatisticsParam {
     public MeetingStatisticsParam(){}
-    public MeetingStatisticsParam(String createBy,String enrollUsername,String enrollNickname,Date enrollTime,Integer num,BigDecimal price,String meetingId){
+    public MeetingStatisticsParam(String createBy,Date enrollTime,Integer num,BigDecimal price,String meetingId){
         this.createBy=createBy;
-        this.enrollUsername=enrollUsername;
-        this.enrollNickname=enrollNickname;
         this.enrollTime=enrollTime;
         this.num=num;
         this.price=price;
